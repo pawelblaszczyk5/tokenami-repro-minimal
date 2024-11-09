@@ -205,19 +205,9 @@
     --test-1: initial;
     --test-1_background-color: initial;
     --test-3: initial;
-    --test-3_background-color: initial;
-    --margin: initial;
     --test-2: initial;
     --test-2_margin: initial;
     --test-4: initial;
-    --test-4_margin: initial;
-  }
-
-  @layer tk1 {
-    [style] {
-      margin: var(--_n3khrc, var(--margin, revert-layer));
-      --_n3khrc: var(--margin__calc) calc(var(--margin) * var(--_grid));
-    }
   }
 
   @layer tk2 {
@@ -227,7 +217,7 @@
   }
 
   @layer tks1 {
-    [style] p, [style] {
+    [style] p, [style], [style] .test-3, [style] .test-4 {
       margin: var(--_c61uqp, var(--_1ut53h5, revert-layer));
       --_1ut53h5: var(--test-2) var(--_1j30psg, var(--test-2_margin));
       --_1j30psg: var(--test-2_margin__calc) calc(var(--test-2_margin) * var(--_grid));
@@ -237,7 +227,7 @@
   }
 
   @layer tks2 {
-    [style] p, [style] {
+    [style] p, [style], [style] .test-3, [style] .test-4 {
       background-color: var(--_89d124, var(--_171bftq, var(--_ohlf6, revert-layer)));
       --_ohlf6: var(--prose-p) var(--prose-p_background-color);
       --_171bftq: var(--test-1) var(--test-1_background-color);
@@ -253,7 +243,7 @@
     --test-1: ;
   }
 
-  [style].test-4 {
+  [style] .test-3 {
     --test-3: ;
   }
 
@@ -261,7 +251,7 @@
     --test-2: ;
   }
 
-  [style].test-4 {
+  [style] .test-4 {
     --test-4: ;
   }
 }

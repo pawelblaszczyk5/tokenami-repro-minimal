@@ -22,7 +22,7 @@ export const App = () => {
           <p>Bad again</p>
           <span>
             I don't have any background color because there's no `prose-span`
-            selector
+            selector, but also parent element didn't get color correctly
           </span>
         </div>
       </div>
@@ -33,13 +33,12 @@ export const App = () => {
       </style>
       <div
         style={css({
-          "--m": 2,
           "--test-2_m": 4,
         })}
       >
         <div className="test-2">
           <p>We have margins which we shouldn't have</p>
-          <p>We have margins which we shouldn't have</p>
+          <p>And parent element doesn't have proper margin</p>
           <p style={{ background: "gray" }}>
             But only if no parent element has [style] attribute
           </p>
@@ -52,14 +51,15 @@ export const App = () => {
         })}
       >
         <div className="test-3">
-          <p>
-            Now this works correctly, because I slightly adjusted the selector
-            in config
-          </p>
+          <p>Now changing order does nothing I think?</p>
           <p style={css({ "--font-size": "var(--text-size_sm)" })}>
-            Yup, seems to work
+            have good background color?
           </p>
-          <span>I don't have any background color correctly</span>
+          <p>Bad again</p>
+          <span>
+            I have background color, because it got properly applied to parent
+            element
+          </span>
         </div>
       </div>
       <style>
@@ -69,16 +69,18 @@ export const App = () => {
       </style>
       <div
         style={css({
-          "--m": 2,
           "--test-4_m": 4,
         })}
       >
         <div className="test-4">
+          <p>We have margins which we shouldn't have</p>
+          <p>But parent element has it correctly now</p>
           <p>
-            Now this works correctly, because I slightly adjusted the selector
-            in config
+            Btw try to add another p tag after this with HMR turned on - React
+            reuses the node of the one with `style` attribute but removes the
+            value, which also impacts styling
           </p>
-          <p style={{ background: "gray" }}>Yup, seems to work</p>
+          <p style={{ background: "gray" }}>Same as before</p>
         </div>
       </div>
     </>

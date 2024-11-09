@@ -8,8 +8,8 @@ export default createConfig({
     "prose-p": "& p",
     "test-1": ".test-1",
     "test-2": ".test-2",
-    "test-3": "&.test-4",
-    "test-4": "&.test-4",
+    "test-3": "& .test-3",
+    "test-4": "& .test-4",
   },
   include: ["src/**/*.{ts,tsx}"],
 });
