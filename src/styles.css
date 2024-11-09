@@ -208,11 +208,19 @@
     --test-2: initial;
     --test-2_margin: initial;
     --test-4: initial;
+    --block-size: initial;
   }
 
   @layer tk2 {
     [style] {
       font-size: var(--font-size, revert-layer);
+    }
+  }
+
+  @layer tkl1 {
+    [style] {
+      block-size: var(--_1ieen97, var(--block-size, revert-layer));
+      --_1ieen97: var(--block-size__calc) calc(var(--block-size) * var(--_grid));
     }
   }
 

@@ -6,6 +6,7 @@ export default createConfig({
   selectors: {
     ...designSystemConfig.selectors,
     "prose-p": "& p",
+    "prose-span": "& span",
     "test-1": ".test-1",
     "test-2": ".test-2",
     "test-3": "& .test-3",

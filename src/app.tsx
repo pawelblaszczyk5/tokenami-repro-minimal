@@ -22,7 +22,8 @@ export const App = () => {
           <p>Bad again</p>
           <span>
             I don't have any background color because there's no `prose-span`
-            selector, but also parent element didn't get color correctly
+            used anywhere - try to add it, but also parent element didn't get
+            color correctly
           </span>
         </div>
       </div>
@@ -46,12 +47,20 @@ export const App = () => {
       </div>
       <div
         style={css({
+          "--h": 20,
+        })}
+      ></div>
+      <div
+        style={css({
           "--prose-p_background-color": "var(--color_red8)",
           "--test-3_background-color": "var(--color_amber8)",
         })}
       >
         <div className="test-3">
-          <p>Now changing order does nothing I think?</p>
+          <p>
+            Now changing order does nothing I think? (adjusted selector
+            slightly)
+          </p>
           <p style={css({ "--font-size": "var(--text-size_sm)" })}>
             have good background color?
           </p>
