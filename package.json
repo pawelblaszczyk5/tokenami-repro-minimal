@@ -10,15 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tokenami/css": "^0.0.69",
-    "@tokenami/ds": "^0.0.69",
+    "@tokenami/css": "^0.0.71",
+    "@tokenami/ds": "^0.0.71",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
-    "@tokenami/dev": "^0.0.69",
-    "@tokenami/ts-plugin": "^0.0.69",
+    "@tokenami/dev": "^0.0.71",
+    "@tokenami/ts-plugin": "^0.0.71",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
@@ -29,5 +29,6 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.7.0",
     "vite": "^5.4.8"
-  }
+  },
+  "packageManager": "pnpm@9.12.3+sha256.24235772cc4ac82a62627cd47f834c72667a2ce87799a846ec4e8e555e2d4b8b"
 }
