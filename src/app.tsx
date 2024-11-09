@@ -84,6 +84,10 @@ export const App = () => {
         <div className="test-4">
           <p>We have margins which we shouldn't have</p>
           <p>But parent element has it correctly now</p>
+          <span>
+            Also this one works because it's `span` and no `prose-span` is used
+            anywhere
+          </span>
           <p>
             Btw try to add another p tag after this with HMR turned on - React
             reuses the node of the one with `style` attribute but removes the
